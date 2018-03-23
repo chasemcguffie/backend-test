@@ -1,0 +1,26 @@
+{
+  "name": "backend_test_boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel server/src -d server/lib",
+    "start:dev": "npm run watch:server",
+    "start:server": "node server/lib/index.js",
+    "watch:server": "nodemon --watch server/src --exec \"npm run babel && npm run start:server\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "nodemon": "^1.17.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0"
+  }
+}
